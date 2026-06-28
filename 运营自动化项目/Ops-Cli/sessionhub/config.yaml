@@ -1,0 +1,36 @@
+chrome:
+  port: 9222
+  user_data_dir: ~/.sessionhub/chrome-9222
+  app_path: /Applications/Google Chrome.app/Contents/MacOS/Google Chrome
+
+platforms:
+  tmall:
+    name: 天猫超市
+    aliases:
+      - tmall
+      - tmall_chaoshi
+      - maochao
+    home_url: https://web.txcs.tmall.com/
+    login_check_url: https://web.txcs.tmall.com/
+    cookie_domains:
+      - tmall.com
+      - taobao.com
+      - hemaos.com
+  jst:
+    name: 聚水潭
+    aliases:
+      - jst
+      - jst_erp
+      - jushuitan
+    home_url: https://www.erp321.com/app/order/order/list.aspx
+    login_check_url: https://www.erp321.com/app/order/order/list.aspx
+    cookie_domains:
+      - erp321.com
+      - jushuitan.com
+
+capture:
+  allowed_domains:
+    - erp321.com
+    - jushuitan.com
+    - tmall.com
+    - taobao.com

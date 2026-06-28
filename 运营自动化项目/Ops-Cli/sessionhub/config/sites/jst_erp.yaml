@@ -1,0 +1,37 @@
+site: jst_erp
+name: 聚水潭 ERP 后台
+login_url: "https://www.erp321.com/app/order/order/list.aspx"
+home_url: "https://www.erp321.com/app/order/order/list.aspx"
+scenes:
+  order_list:
+    target_url: "https://www.erp321.com/app/order/order/list.aspx"
+    match_url_contains:
+      - "www.erp321.com/app/order/order/list.aspx"
+      - "am___=LoadDataToJSON"
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: reload
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  product_export:
+    target_url: "https://src.erp321.com/erp-components/goods-selector/"
+    match_url_contains:
+      - "api.erp321.com/erp/webapi/ItemApi/Export/GetExportData"
+      - "owner_co_id="
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: click_any_text
+        texts:
+          - "导出"
+          - "导出全部"
+          - "下载"
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true

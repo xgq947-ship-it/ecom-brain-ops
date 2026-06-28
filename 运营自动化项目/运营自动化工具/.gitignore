@@ -1,0 +1,17 @@
+data/sessions/
+logs/
+.env
+config/secrets.yaml
+config/paths.yaml
+config/paths.local.yaml
+*.curl
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/
+
+runtime/runs/
+runtime/context/
+*.xlsx
+*.log

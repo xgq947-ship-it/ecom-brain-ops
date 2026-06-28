@@ -1,0 +1,20 @@
+name: append_brush_orders
+type: workflow
+workflow: append_brush_orders
+description: 刷单表格登记
+aliases:
+  - append_brush_orders
+  - 刷单表格登记
+  - 追加刷单登记
+  - 登记刷单表格
+  - 获取刷单数据源
+  - 微信刷单表格登记
+fuzzy_keywords:
+  - [刷单, 登记]
+  - [刷单, 表格]
+  - [刷单, 追加]
+  - [刷单, 数据源]
+  - [微信, 刷单]
+required_modules:
+  - openpyxl
+entrypoint: append_brush_orders.py

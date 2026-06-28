@@ -1,0 +1,19 @@
+name: process_maochao_bills
+description: 猫超月账单整理
+type: workflow
+workflow: tmall_monthly_bill
+aliases:
+  - process_maochao_bills
+  - 运行猫超账单整理
+  - 整理猫超账单
+  - 猫超账单整理
+  - 处理猫超月账单数据
+  - 整理猫超月账单数据
+fuzzy_keywords:
+  - [猫超, 账单]
+  - [猫超, 对账]
+  - [月账单]
+  - [HDB]
+required_modules:
+  - openpyxl
+entrypoint: main.py

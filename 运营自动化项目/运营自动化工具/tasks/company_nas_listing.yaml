@@ -1,0 +1,17 @@
+name: company_nas_listing
+description: 公司网盘产品资料下载和上架数据生成
+type: workflow
+workflow: company_nas_listing
+aliases:
+  - company_nas_listing
+  - 公司网盘下载产品
+  - NAS产品资料下载
+  - 下载产品资料并生成上架数据
+fuzzy_keywords:
+  - [公司网盘]
+  - [NAS, 产品]
+  - [网盘, 下载]
+  - [产品资料, 上架]
+required_modules:
+  - openpyxl
+entrypoint: company_nas_listing.py

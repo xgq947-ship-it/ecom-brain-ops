@@ -1,0 +1,17 @@
+name: 按摩椅订单自动备注
+type: workflow
+workflow: jst_massage_chair_order_remark
+description: 聚水潭按摩椅订单自动备注
+aliases:
+  - jst_massage_chair_order_remark
+  - 按摩椅订单自动备注
+  - 聚水潭按摩椅备注
+  - 猫超按摩椅订单备注
+  - 按摩椅订单备注
+fuzzy_keywords:
+  - [按摩椅, 订单, 备注]
+  - [聚水潭, 按摩椅, 备注]
+  - [猫超, 按摩椅, 备注]
+required_modules:
+  - openpyxl
+entrypoint: main.py

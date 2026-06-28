@@ -1,0 +1,18 @@
+name: 猫超店铺商品销售分析
+type: workflow
+workflow: jst_tmcs_shop_product_sales_analysis
+description: 猫超店铺商品销售分析（下载商品销售情况.csv 并输出店铺款式编码）
+aliases:
+  - 猫超店铺商品销售分析
+  - 猫超商品销售情况分析
+  - 聚水潭商品销售分析
+  - 聚水潭商品利润分析
+  - 聚水潭商品利润宝贝分析
+  - 商品销售情况编码输出
+fuzzy_keywords:
+  - [猫超, 商品, 销售, 分析]
+  - [商品, 销售情况, 编码]
+  - [聚水潭, 商品, 销售]
+  - [聚水潭, 商品, 利润]
+required_modules: []
+entrypoint: main.py

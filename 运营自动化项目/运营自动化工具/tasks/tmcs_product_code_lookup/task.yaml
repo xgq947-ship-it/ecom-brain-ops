@@ -1,0 +1,18 @@
+name: tmcs_product_code_lookup
+type: workflow
+workflow: tmcs_product_code_lookup
+description: 猫超商品编码查询（本地商品列表型号模糊匹配）
+aliases:
+  - tmcs_product_code_lookup
+  - 猫超商品编码查询
+  - 查询猫超商品编码
+  - 商品型号查猫超编码
+  - 型号查商品编码
+  - 猫超型号查询
+fuzzy_keywords:
+  - [猫超, 商品编码, 查询]
+  - [猫超, 型号, 编码]
+  - [型号, 查, 商品编码]
+required_modules:
+  - openpyxl
+entrypoint: main.py

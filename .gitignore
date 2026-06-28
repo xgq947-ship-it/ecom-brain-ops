@@ -1,0 +1,29 @@
+# ── 虚拟环境 ──
+.venv/
+**/.venv/
+
+# ── Python 缓存 ──
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# ── 系统 ──
+.DS_Store
+
+# ── 运行产物 / 日志 ──
+**/runtime/runs/
+*.log
+
+# ── 本地配置 / 密钥(双保险,模板 *.example 仍会提交)──
+**/paths.local.yaml
+**/paths.yaml
+**/*.secret.env
+**/.env
+
+# ── 本地工具配置(不分发)──
+.mcp.json
+**/.mcp.json
+.claude/
+**/.claude/
+.code-review-graph/
+**/.code-review-graph/

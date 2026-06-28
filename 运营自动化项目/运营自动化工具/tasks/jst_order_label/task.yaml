@@ -1,0 +1,17 @@
+name: tag_jst_brush_orders
+type: workflow
+workflow: jst_order_label
+description: 聚水潭刷单订单打标
+aliases:
+  - tag_jst_brush_orders
+  - 聚水潭刷单订单打标
+  - 刷单订单插黄旗
+  - 刷单订单备注sfeizao
+  - 特殊件标记
+fuzzy_keywords:
+  - [聚水潭, 刷单, 打标]
+  - [刷单, 黄旗]
+  - [刷单, 备注, sfeizao]
+  - [特殊件, 标记]
+required_modules: []
+entrypoint: main.py

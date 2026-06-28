@@ -1,0 +1,14 @@
+name: organize_buyer_show
+type: workflow
+workflow: organize_buyer_show
+description: 买家秀文件整理（删低质 + 去 SKU 层级平铺）
+aliases:
+  - 买家秀文件整理
+  - 整理买家秀文件
+  - 买家秀整理
+  - 整理买家秀
+fuzzy_keywords:
+  - [买家秀, 整理]
+  - [买家秀, 文件, 整理]
+required_modules: []
+entrypoint: organize_buyer_show.py

@@ -1,0 +1,15 @@
+{
+  "supply_price_factor": 0.9,
+  "vip_discount_rate": 0.0,
+  "general_fee_rate": 0.007,
+  "other_fee_rate": 0.02,
+  "storage_fee_rate": 0.0,
+  "tax_rate": 0.045,
+  "management_fee_rate": 0.048,
+  "refund_rate": 0.1,
+  "refund_flat_fee": 5.0,
+  "domestic_shipping_fee": 5.0,
+  "gift_cost": 0.0,
+  "safe_profit_rate": 0.1,
+  "ideal_promotion_ratio": 0.12
+}

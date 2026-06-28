@@ -1,0 +1,17 @@
+name: tmcs_fulfillment_watch
+type: workflow
+workflow: tmcs_fulfillment_watch
+description: 猫超物流履约监控
+aliases:
+  - 猫超履约监控
+  - 天猫超市履约监控
+  - 猫超物流履约
+  - 猫超商家仓履约
+  - 商家仓履约监控
+fuzzy_keywords:
+  - [猫超, 履约, 监控]
+  - [猫超, 物流, 履约]
+  - [商家仓, 履约]
+  - [天猫超市, 履约]
+required_modules: []
+entrypoint: tmcs_fulfillment_watch.py

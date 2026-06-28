@@ -1,0 +1,16 @@
+name: tmcs_fund_table_generate
+type: workflow
+workflow: tmcs_fund_table_generate
+description: 猫超资金表生成
+aliases:
+  - 猫超资金表生成
+  - 天猫超市资金表生成
+  - 生成猫超资金表
+  - 猫超公司资金表生成
+fuzzy_keywords:
+  - [猫超, 资金表, 生成]
+  - [天猫超市, 资金表, 生成]
+required_modules:
+  - openpyxl
+  - PIL
+entrypoint: tmcs_fund_table_generate.py

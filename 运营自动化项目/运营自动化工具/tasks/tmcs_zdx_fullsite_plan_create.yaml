@@ -1,0 +1,15 @@
+name: 创建智多星全站推广计划
+type: workflow
+workflow: tmcs_zdx_fullsite_plan_create
+description: 根据商品ID创建智多星货品全站推广计划
+aliases:
+  - 创建智多星全站推广计划
+  - 智多星全站推广
+  - 创建货品全站推
+  - 货品全站推创建计划
+fuzzy_keywords:
+  - [智多星, 全站推广, 创建]
+  - [货品全站推, 创建]
+  - [智多星, 推广计划]
+required_modules: []
+entrypoint: tmcs_zdx_fullsite_plan_create.py

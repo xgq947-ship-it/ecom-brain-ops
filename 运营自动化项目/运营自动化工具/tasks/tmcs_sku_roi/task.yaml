@@ -1,0 +1,14 @@
+name: tmcs_sku_roi
+type: workflow
+workflow: tmcs_sku_roi
+description: 猫超单品 ROI 测算
+aliases:
+  - tmcs_sku_roi
+  - 猫超单品ROI测算
+fuzzy_keywords:
+  - [猫超, 单品, ROI]
+  - [猫超, ROI, 测算]
+required_modules:
+  - openpyxl
+entrypoint: main.py
+

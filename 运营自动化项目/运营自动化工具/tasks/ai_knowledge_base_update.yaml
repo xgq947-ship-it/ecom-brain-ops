@@ -1,0 +1,15 @@
+name: ai_knowledge_base_update
+type: workflow
+workflow: ai_knowledge_base_update
+description: AI知识库同步更新
+aliases:
+  - AI知识库同步更新
+  - 知识库同步更新
+  - 更新AI Knowledge Base
+  - 更新AI知识库
+fuzzy_keywords:
+  - [AI, 知识库, 更新]
+  - [知识库, 同步, 更新]
+  - [Knowledge, Base, 更新]
+required_modules: []
+entrypoint: ai_knowledge_base_update.py

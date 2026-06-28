@@ -1,0 +1,13 @@
+name: update_maochao_goods
+type: workflow
+workflow: tmall_product_list
+description: 更新猫超商品列表
+aliases:
+  - update_maochao_goods
+  - 更新猫超商品列表
+fuzzy_keywords:
+  - [猫超, 商品列表]
+  - [猫超, 商品, 更新]
+required_modules:
+  - openpyxl
+entrypoint: main.py

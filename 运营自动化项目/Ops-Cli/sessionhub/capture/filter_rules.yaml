@@ -1,0 +1,19 @@
+allowed_domains:
+  - erp321.com
+  - jushuitan.com
+  - tmall.com
+  - taobao.com
+  - alimama.com
+
+blocked_resource_types:
+  - image
+  - font
+  - stylesheet
+  - media
+
+record_methods:
+  - GET
+  - POST
+  - PUT
+  - PATCH
+  - DELETE

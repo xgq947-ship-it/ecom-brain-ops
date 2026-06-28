@@ -1,0 +1,15 @@
+name: jst_pickup_watch
+type: workflow
+workflow: jst_pickup_watch
+description: 聚水潭付款订单揽收时效风险监控
+aliases:
+  - jst_pickup_watch
+  - 聚水潭揽收监控
+  - 聚水潭订单揽收监控
+  - 订单揽收异常提醒
+fuzzy_keywords:
+  - [聚水潭, 揽收, 监控]
+  - [订单, 揽收, 异常]
+  - [揽收, 提醒]
+required_modules: []
+entrypoint: jst_pickup_watch.py

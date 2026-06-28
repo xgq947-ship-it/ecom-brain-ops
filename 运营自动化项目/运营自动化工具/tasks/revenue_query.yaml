@@ -1,0 +1,24 @@
+name: revenue_query
+type: workflow
+workflow: revenue_query
+description: 今日实时营业额（默认今天、默认猫超店铺）
+aliases:
+  - 今日实时营业额
+  - 猫超今日实时营业额
+  - 天猫超市今日实时营业额
+  - 营业额查询
+  - 今日营业额查询
+  - 猫超今日营业额
+  - 猫超营业额
+  - 今日营业额
+  - 猫超今日销售额
+  - 天猫超市营业额
+  - 天猫超市今日营业额
+fuzzy_keywords:
+  - [猫超, 今日, 实时, 营业额]
+  - [今日, 实时, 营业额]
+  - [猫超, 今日, 营业额]
+  - [猫超, 营业额]
+  - [今日, 营业额]
+required_modules: []
+entrypoint: revenue_query.py

@@ -1,0 +1,18 @@
+name: tmcs_realtime_inventory_watch
+type: workflow
+workflow: tmcs_realtime_inventory_watch
+description: 猫超库存实时监测
+aliases:
+  - 猫超库存实时监测
+  - 库存实时监测
+  - 猫超库存风险监测
+  - 聚水潭猫超库存对比
+  - 猫超可售库存预警
+fuzzy_keywords:
+  - [猫超, 库存, 监测]
+  - [库存, 实时, 监测]
+  - [猫超, 库存, 风险]
+  - [聚水潭, 猫超, 库存]
+  - [猫超, 可售, 预警]
+required_modules: []
+entrypoint: tmcs_realtime_inventory_watch.py

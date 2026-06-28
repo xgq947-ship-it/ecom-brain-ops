@@ -1,0 +1,18 @@
+name: jst_order_logistics
+type: workflow
+workflow: jst_order_logistics
+description: 聚水潭订单物流轨迹查询
+aliases:
+  - jst_order_logistics
+  - 物流查询
+  - 物流轨迹查询
+  - 订单物流查询
+  - 聚水潭物流查询
+  - 查询物流
+fuzzy_keywords:
+  - [物流, 查询]
+  - [物流, 轨迹]
+  - [订单, 物流]
+  - [聚水潭, 物流]
+required_modules: []
+entrypoint: jst_order_logistics.py

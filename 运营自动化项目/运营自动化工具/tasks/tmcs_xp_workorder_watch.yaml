@@ -1,0 +1,15 @@
+name: tmcs_xp_workorder_watch
+type: workflow
+workflow: tmcs_xp_workorder_watch
+description: 猫超 XP 工单数量监控
+aliases:
+  - 猫超工单监控
+  - XP工单监控
+  - 猫超XP工单数量
+  - 猫超工单数量
+fuzzy_keywords:
+  - [猫超, 工单, 监控]
+  - [XP, 工单]
+  - [猫超, 工单, 数量]
+required_modules: []
+entrypoint: tmcs_xp_workorder_watch.py

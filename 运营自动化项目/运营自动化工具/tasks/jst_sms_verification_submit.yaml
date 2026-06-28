@@ -1,0 +1,16 @@
+name: jst_sms_verification_submit
+type: workflow
+workflow: jst_sms_verification_submit
+description: 聚水潭短信验证码提交（把用户提供的 4 位验证码填入 9222 聚水潭弹窗并提交）
+aliases:
+  - 聚水潭短信验证码提交
+  - 聚水潭验证码提交
+  - JST验证码提交
+  - JST短信验证
+  - 聚水潭短信验证
+fuzzy_keywords:
+  - [聚水潭, 验证码]
+  - [聚水潭, 短信, 验证]
+  - [jst, 验证码]
+required_modules: []
+entrypoint: jst_sms_verification_submit.py

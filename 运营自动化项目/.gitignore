@@ -1,0 +1,37 @@
+.DS_Store
+.playwright-cli/
+.superpowers/
+logs/
+runtime/
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*/.venv/
+*/.pytest_cache/
+*/logs/
+*/runtime/
+*/output/
+*/outputs/
+*/screenshots/
+Ops-Cli/video/
+
+# core/runtime 是 workflow runtime 源码包，不是数据目录；需从上面的 runtime/ 忽略规则中豁免
+!运营自动化工具/core/runtime/
+!运营自动化工具/core/runtime/*.py
+
+# tmcs 商品同步模板含实时 Cookie / _scm_token_ 登录态，禁止入库（CLAUDE.md 红线）
+运营自动化工具/data/tmcs/
+Ops-Cli/data/tmcs/
+
+# ai_file_iterate workflow：密钥（Claude 无头长期 token）与本机覆盖配置，绝不入库
+运营自动化工具/config/ai_iterate.secret.env
+运营自动化工具/config/ai_iterate.local.json
+
+# code-review-graph：本机代码图谱 SQLite 索引（AI 工具侧产物，非业务数据，不入库）
+.code-review-graph/
+
+# 本地工具配置(不分发)
+.mcp.json
+.claude/
+.code-review-graph/

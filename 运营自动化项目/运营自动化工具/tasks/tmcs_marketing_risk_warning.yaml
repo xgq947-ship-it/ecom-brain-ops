@@ -1,0 +1,16 @@
+name: tmcs_marketing_risk_warning
+type: workflow
+workflow: tmcs_marketing_risk_warning
+description: 猫超营销端风险预警数值读取
+aliases:
+  - 猫超营销风险预警
+  - 天猫超市营销风险预警
+  - 营销端风险预警
+  - 猫超风险预警
+  - 风险预警数值
+fuzzy_keywords:
+  - [猫超, 营销, 风险预警]
+  - [营销, 风险预警]
+  - [猫超, 风险预警]
+required_modules: []
+entrypoint: tmcs_marketing_risk_warning.py

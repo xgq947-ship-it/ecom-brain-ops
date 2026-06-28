@@ -1,0 +1,37 @@
+# ════════════════════════════════════════════════════════════════════════════
+# 路径配置模板（paths.yaml.example）
+#
+# ⚠️ 绝大多数情况你【不需要】任何配置文件就能直接跑。
+#    所有路径已从「仓库位置」与「Path.home()」自动推导：
+#      · 仓库自身（runtime/logs/Ops-Cli/nas_index 等）→ 由 run.py 位置推导
+#      · 电商Brain 目录树（主数据/刷单数据/01-产品库）→ 随仓库结构推导
+#      · 系统目录（~/Desktop、~/Downloads 及其下文件）→ 由 Path.home() 推导
+#      · 微信目录 → 自动 glob 探测（路径含与账号绑定的 wxid）
+#
+# 只有「无法自动推导」的路径才需要覆盖，最省事的方式是：
+#      python3 run.py setup        # 自动体检 + 探测 + 生成 config/paths.local.yaml
+#
+# 想手动覆盖时，把需要的行复制到 config/paths.local.yaml（gitignore，不提交）。
+# 优先级（低→高）：自动推导 < paths.yaml < paths.local.yaml < OPS_PATH_* 环境变量。
+# 非标准目录布局也可用环境变量改锚点：ECOM_STORE_ROOT / ECOM_BRAIN_DIR。
+# ════════════════════════════════════════════════════════════════════════════
+
+# ── 通常需要手动配置的两项（无法自动推导） ───────────────────────────────
+
+# 微信文件目录：路径里的 wxid 与微信账号绑定，换账号会变。
+# 默认会自动探测；探测不到（或有多个账号要指定）时在此覆盖：
+# wechat_file_dir: ~/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_xxx/msg/file
+
+# 公司 NAS 挂载点：仅「用到 NAS 的 workflow」需要；不同网络/组织不同。
+# company_nas_product_root 默认跟随该挂载点，一般无需单独配。
+# company_nas_mount: /Volumes/suolong.synology.me
+
+# ── 以下均可自动推导，仅在你的目录布局与默认不同时才需覆盖 ─────────────
+# desktop_dir: ~/Desktop
+# downloads_dir: ~/Downloads
+# ecommerce_brain_dir: ~/Desktop/电商Brain
+# product_library_dir: ~/Desktop/电商Brain/01-产品库
+# reimbursement_dir: ~/Desktop/电商Brain/02-运营店铺/刷单数据
+# jst_product_master_file: ~/Desktop/电商Brain/02-运营店铺/主数据/聚水潭商品资料（最新）.xlsx
+# tmall_bill_download_dir: ~/Downloads
+# buyer_show_output_dir: ~/Desktop

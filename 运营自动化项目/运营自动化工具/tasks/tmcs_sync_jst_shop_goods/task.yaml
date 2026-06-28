@@ -1,0 +1,17 @@
+name: tmcs_sync_jst_shop_goods
+type: workflow
+workflow: tmcs_sync_jst_shop_goods
+description: 猫超平台商品信息同步聚水潭店铺商品资料
+aliases:
+  - tmcs_sync_jst_shop_goods
+  - 聚水潭商品信息同步猫超
+  - 猫超商品信息同步聚水潭
+  - 平台商品ID同步聚水潭
+  - 猫超商品同步聚水潭
+fuzzy_keywords:
+  - [聚水潭, 商品信息, 同步, 猫超]
+  - [猫超, 商品, 同步, 聚水潭]
+  - [平台商品ID, 同步, 聚水潭]
+required_modules:
+  - openpyxl
+entrypoint: main.py

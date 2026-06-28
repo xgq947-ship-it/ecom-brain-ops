@@ -1,0 +1,13 @@
+name: update_jst_products
+type: workflow
+workflow: jst_product_sync
+description: 更新聚水潭商品资料
+aliases:
+  - update_jst_products
+  - 更新聚水潭商品资料
+fuzzy_keywords:
+  - [聚水潭, 商品资料]
+  - [聚水潭, 资料]
+  - [JST, 商品]
+required_modules: []
+entrypoint: main.py

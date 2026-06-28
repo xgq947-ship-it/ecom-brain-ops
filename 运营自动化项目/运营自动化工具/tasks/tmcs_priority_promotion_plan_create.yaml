@@ -1,0 +1,16 @@
+name: 猫超优先推广自动建计划
+type: workflow
+workflow: tmcs_priority_promotion_plan_create
+description: 读取优先推广清单，过滤已在推广商品后批量调用智多星全站推广建计划 workflow
+aliases:
+  - 猫超优先推广自动建计划
+  - 猫超推广清单自动建计划
+  - 优先推广商品建计划
+  - 猫超智多星批量建计划
+fuzzy_keywords:
+  - [猫超, 优先推广, 建计划]
+  - [猫超, 智多星, 批量建计划]
+  - [推广清单, 自动建计划]
+required_modules:
+  - openpyxl
+entrypoint: tmcs_priority_promotion_plan_create.py

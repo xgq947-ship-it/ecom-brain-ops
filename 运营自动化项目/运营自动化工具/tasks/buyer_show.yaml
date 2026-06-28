@@ -1,0 +1,18 @@
+name: buyer_show
+type: workflow
+workflow: buyer_show
+description: 买家秀自动分组、压缩和登记表回写
+aliases:
+  - buyer_show
+  - 买家秀自动化
+  - 买家秀打包
+  - 生成买家秀评价
+  - 评价图分组压缩
+fuzzy_keywords:
+  - [买家秀]
+  - [评价, 生成]
+  - [评价, 压缩]
+required_modules:
+  - openpyxl
+  - PIL
+entrypoint: buyer_show.py

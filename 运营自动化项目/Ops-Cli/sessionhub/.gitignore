@@ -1,0 +1,15 @@
+data/*
+!data/.gitkeep
+logs/
+.env
+config/secrets.yaml
+*.har
+*.zip
+*.xlsx
+*.csv
+*.curl
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+venv/

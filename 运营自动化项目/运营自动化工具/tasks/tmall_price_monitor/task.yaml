@@ -1,0 +1,19 @@
+name: tmall_price_monitor
+type: workflow
+workflow: tmall_price_monitor
+description: 天猫商品价格监控（实时价格 vs 控价对比）
+aliases:
+  - tmall_price_monitor
+  - 天猫商品价格监控
+  - 天猫价格监控
+  - 天猫控价监控
+  - 商品控价监控
+  - 天猫实时价格对比
+fuzzy_keywords:
+  - [天猫, 价格, 监控]
+  - [天猫, 控价]
+  - [商品, 控价, 监控]
+  - [天猫, 实时, 价格]
+required_modules:
+  - openpyxl
+entrypoint: main.py

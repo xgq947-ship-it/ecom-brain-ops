@@ -1,0 +1,15 @@
+name: jst_order_invoice_workorder
+type: workflow
+workflow: jst_order_invoice_workorder
+description: 聚水潭发票工单
+aliases:
+  - jst_order_invoice_workorder
+  - 聚水潭发票工单
+  - 发票工单
+  - jst发票工单
+fuzzy_keywords:
+  - [聚水潭, 发票, 工单]
+  - [jst, 发票, 工单]
+  - [发票, 工单]
+required_modules: []
+entrypoint: jst_order_invoice_workorder.py

@@ -1,0 +1,20 @@
+name: company_nas_index
+description: 公司网盘产品资料目录索引和搜索
+type: workflow
+workflow: company_nas_index
+aliases:
+  - company_nas_index
+  - 扫描公司网盘目录
+  - 更新公司网盘索引
+  - 建立NAS目录索引
+  - 公司网盘目录层级记录
+  - 搜索公司网盘文件
+fuzzy_keywords:
+  - [公司网盘, 索引]
+  - [NAS, 索引]
+  - [公司网盘, 目录, 扫描]
+  - [公司网盘, 文件, 搜索]
+  - [搜索, 公司网盘, 文件]
+required_modules:
+  - openpyxl
+entrypoint: company_nas_index.py

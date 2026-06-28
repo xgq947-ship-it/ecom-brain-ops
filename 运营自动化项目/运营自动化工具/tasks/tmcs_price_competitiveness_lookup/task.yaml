@@ -1,0 +1,17 @@
+name: tmcs_price_competitiveness_lookup
+type: workflow
+workflow: tmcs_price_competitiveness_lookup
+description: 猫超价格竞争力商品查询（按商品编码查价格竞争力列表是否存在）
+aliases:
+  - tmcs_price_competitiveness_lookup
+  - 猫超价格竞争力查询
+  - 天猫超市价格竞争力查询
+  - 商品价格竞争力查询
+  - 猫超价格力查询
+fuzzy_keywords:
+  - [猫超, 价格竞争力, 查询]
+  - [天猫超市, 价格竞争力, 查询]
+  - [商品, 价格竞争力]
+  - [猫超, 价格力, 查询]
+required_modules: []
+entrypoint: main.py

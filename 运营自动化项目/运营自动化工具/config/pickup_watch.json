@@ -1,0 +1,33 @@
+{
+  "pickup_watch": {
+    "hours": 48,
+    "risk_thresholds": {
+      "normal_reminder_hours": 12,
+      "high_risk_hours": 20,
+      "timeout_hours": 24
+    },
+    "warehouse": {
+      "carrier": "顺丰",
+      "pickup_times": ["09:30", "14:00", "17:00"],
+      "stop_shipping_time": "17:30",
+      "check_times": ["10:00", "14:30", "17:30", "18:00"]
+    }
+  },
+  "platform_rules": {
+    "cat_supermarket": {
+      "enabled": true,
+      "pay_time_offset_minutes": 30,
+      "after_1730_orders_next_day": true
+    }
+  },
+  "notifier": {
+    "type": "hermes_wechat",
+    "hermes_wechat": {
+      "enabled": false,
+      "base_url": "${HERMES_WECHAT_BASE_URL}",
+      "token": "${HERMES_WECHAT_TOKEN}",
+      "receiver": "${HERMES_WECHAT_RECEIVER}",
+      "timeout_seconds": 10
+    }
+  }
+}

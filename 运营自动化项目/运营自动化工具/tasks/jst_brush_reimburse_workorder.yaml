@@ -1,0 +1,17 @@
+name: jst_brush_reimburse_workorder
+type: workflow
+workflow: jst_brush_reimburse_workorder
+description: 聚水潭刷单报销工单
+aliases:
+  - jst_brush_reimburse_workorder
+  - 聚水潭刷单报销工单
+  - 刷单报销登记
+  - 运营特殊单报销打款
+fuzzy_keywords:
+  - [聚水潭, 刷单, 报销, 工单]
+  - [刷单, 报销, 登记]
+  - [特殊单, 报销, 打款]
+required_modules:
+  - requests
+  - openpyxl
+entrypoint: jst_brush_reimburse_workorder.py

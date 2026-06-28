@@ -1,0 +1,20 @@
+name: ai_file_iterate
+type: workflow
+workflow: ai_file_iterate
+description: 两个 AI（Claude / Codex）轮流打磨同一份文件的迭代优化
+aliases:
+  - 文件优化
+  - 优化文件
+  - 润色文件
+  - 打磨文件
+  - AI互改
+  - 双AI优化
+  - AI迭代优化
+fuzzy_keywords:
+  - [优化, 文件]
+  - [润色, 文件]
+  - [打磨, 文件]
+  - [优化, 文案]
+  - [润色, 文案]
+required_modules: []
+entrypoint: ai_file_iterate.py

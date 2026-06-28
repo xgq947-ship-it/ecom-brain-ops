@@ -1,0 +1,17 @@
+name: retry_queue
+description: 查看或重放失败任务队列
+type: workflow
+workflow: retry_queue
+aliases:
+  - retry_queue
+  - 查看失败任务
+  - 查看重试队列
+  - 重试失败任务
+  - 重放失败任务
+fuzzy_keywords:
+  - [查看, 失败, 任务]
+  - [查看, 重试, 队列]
+  - [重试, 失败, 任务]
+  - [重放, 失败, 任务]
+required_modules: []
+entrypoint: retry_queue.py

@@ -1,0 +1,154 @@
+site: tmall_chaoshi
+name: 天猫超市商家仓后台
+login_url: "https://web.txcs.tmall.com/login?from=https%3A%2F%2Fweb.txcs.tmall.com%2F"
+home_url: "https://web.txcs.tmall.com/"
+download_manage_url: "https://web.txcs.tmall.com/?frameUrl=https%3A%2F%2Fweb.txcs.tmall.com%2Friver%2Fapp%2Fsettlement_download%2Fentities%2FDownloadFile%2Fquery#745319.745451.745563#745319.745451.745563"
+scenes:
+  download_file_query:
+    target_url: "https://web.txcs.tmall.com/?frameUrl=https%3A%2F%2Fweb.txcs.tmall.com%2Friver%2Fapp%2Fsettlement_download%2Fentities%2FDownloadFile%2Fquery#745319.745451.745563#745319.745451.745563"
+    match_url_contains:
+      - DownloadFile
+      - _m=query
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: reload
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  statement_bill_dynamic_list:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/settlement_confirm_query_list?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - tools.cbbs.tmall.com/gei/export/task/wdk-finance-statement-bill-dynamic-list
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_text
+        text: 查询
+      - type: click_text
+        text: 导出列表
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  statement_bill_list_for_supplier:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/settlement_confirm_query_list?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - wdksettlement.hemaos.com/statementBill/v3/listForSupplier
+    method: GET
+    auto_actions:
+      - type: goto_target
+      - type: click_text
+        text: 查询
+      - type: reload
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  tmcs_promotion_zdx_bill_export:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/plan_throw_account_admin?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=3"
+    match_url_contains:
+      - /gei/export/task/ad-funds-flow-export
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: click_any_text
+        texts:
+          - "导出"
+          - "导出列表"
+          - "下载"
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  tmcs_promotion_wxt_bill_export:
+    target_url: "https://one.alimama.com/index.html#!/account/detail"
+    match_url_contains:
+      - exportAccountJournal
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "下载数据"
+          - "导出"
+          - "导出列表"
+          - "下载"
+    # 万相台是 alimama React SPA，且常需手动登录：放宽监听窗口、加密重试节奏，
+    # 并让点击等待异步渲染出来的「下载数据」按钮后再触发导出请求。
+    wait_seconds: 150
+    capture_retry_limit: 40
+    action_interval_seconds: 3
+    click_wait_ms: 2500
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  maochao_item_search:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/indus_merchandise_item_list_rex_mc?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - merchandise-mc.cbbs.tmall.com/webapi/merchandise/item/searchItem
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: reload
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  maochao_item_export:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/indus_merchandise_item_list_rex_mc?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - one-stock-all-tube-adjust-order-log-export
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: click_any_text
+        texts:
+          - "导出"
+          - "导出商品"
+          - "导出列表"
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  maochao_inventory_search:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/indus_half_tube_inventory_management_qtg?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - aic.cbbs.tmall.com/one-stock/listOneStockAllTubeInventory
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: reload
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
+  maochao_inventory_export:
+    target_url: "https://web.txcs.tmall.com/pages/chaoshi/indus_half_tube_inventory_management_qtg?_c_lang=zh-cn&iframeContainerFrom=tm&__IFRAME_CONTAINER_IFRAME_ID__=2"
+    match_url_contains:
+      - tools.cbbs.tmall.com/gei/export/task/
+    method: POST
+    auto_actions:
+      - type: goto_target
+      - type: click_any_text
+        texts:
+          - "查询"
+          - "搜索"
+      - type: click_any_text
+        texts:
+          - "导出"
+          - "导出列表"
+          - "下载"
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
