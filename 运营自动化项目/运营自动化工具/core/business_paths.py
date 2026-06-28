@@ -37,6 +37,10 @@ def business_paths(*, project: Path, store: Path, brain: Path, home: Path) -> di
     return {
         # ① 仓库自身（随仓库走）
         "pickup_watch_config": project / "config" / "pickup_watch.json",
+        # AI 知识库同步默认路径（锚点推导，免手填）：
+        #   source-root = 项目根（含「运营自动化工具」的那层）；kb-root = 同级 ai知识库。
+        "ai_kb_source_root": store,
+        "ai_kb_root": store.parent / "ai知识库",
         "nas_index_dir": nas_index,
         "nas_index_json": nas_index / "company_nas_tree.json",
         "nas_index_md": nas_index / "company_nas_tree.md",

@@ -8,6 +8,7 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+from core.config_loader import get_path
 from core.runtime import parse_workflow_args, Artifact, StepContext, failure_result, success_result
 
 from workflows.ai_knowledge_base_update.document_sync import (
@@ -63,16 +64,17 @@ CORE_KB_READ_ORDER = [
 
 def _parse_flags(ctx: StepContext) -> Flags:
     parser = argparse.ArgumentParser(add_help=False)
-    parser.add_argument("--source-root", required=True)
-    parser.add_argument("--kb-root", required=True)
+    # 不传时按锚点自动推导（source-root=项目根，kb-root=同级 ai知识库），实现零配置。
+    parser.add_argument("--source-root", default=None)
+    parser.add_argument("--kb-root", default=None)
     parser.add_argument("--prompt-file", default=str(PROMPT_TEMPLATE))
     parser.add_argument("--updates-file", default=None)
     parser.add_argument("--max-docs", type=int, default=None)
     parser.add_argument("--dry-run", action="store_true")
     namespace = parse_workflow_args(parser, ctx.inputs.get("args") or [])
     return Flags(
-        source_root=Path(namespace.source_root).expanduser(),
-        kb_root=Path(namespace.kb_root).expanduser(),
+        source_root=Path(namespace.source_root).expanduser() if namespace.source_root else get_path("ai_kb_source_root"),
+        kb_root=Path(namespace.kb_root).expanduser() if namespace.kb_root else get_path("ai_kb_root"),
         prompt_file=Path(namespace.prompt_file).expanduser(),
         updates_file=Path(namespace.updates_file).expanduser() if namespace.updates_file else None,
         max_docs=namespace.max_docs,
