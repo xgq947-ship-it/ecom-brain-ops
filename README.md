@@ -13,6 +13,7 @@
 ```text
 运营框架包/
 ├── README.md            ← 本文件（总览）
+├── LICENSE              ← MIT 许可证
 ├── 首次安装指南.md       ← 从零搭建步骤（环境 / 依赖 / 登录态 / 验证）
 ├── 运营自动化项目/       ← 代码主体（平台层 + 业务层）
 └── ai知识库/            ← 配套知识库骨架（结构 + 机制，正文由 workflow 生成）
@@ -23,6 +24,30 @@
 ## 架构分层（核心思想）
 
 代码主体是**两层 + 严格单向依赖**，这是整个框架可维护、可移植的根基：
+
+```mermaid
+flowchart TB
+    subgraph BIZ["运营自动化工具 · 业务编排层"]
+        WF["workflows/ — step 化业务流程"]
+        CORE["core/runtime — WorkflowRunner 内核（零业务 / 零平台）"]
+        REPL["可整体替换：business_paths / business_text / notify_backends"]
+        WF --> CORE
+        REPL -. 配置注入 .-> CORE
+    end
+
+    subgraph PLAT["Ops-Cli · 平台能力层（唯一碰平台）"]
+        PLUG["platforms/ — jst · tmall · tmcs · _example（自动发现注册）"]
+        SH["sessionhub — Chrome 9222 / Cookie / scene 学习"]
+        PLUG --> SH
+    end
+
+    subgraph KB["ai知识库 · 知识沉淀"]
+        K1["00-总览 / 01-工作流 / 02-平台能力 / …"]
+    end
+
+    BIZ ==>|"ops --json 单一契约"| PLAT
+    BIZ -->|"ai_knowledge_base_update workflow"| KB
+```
 
 ```text
 Ops-Cli/                    ← 平台能力层（唯一允许碰平台的代码）
@@ -55,8 +80,9 @@ Ops-Cli/                    ← 平台能力层（唯一允许碰平台的代码
 
 1. **零配置路径**：所有路径从锚点推导（不写死 `/Users/<name>/...`），换机即用；
    非标准布局可用 `config/paths.local.yaml` 或环境变量覆盖。
-2. **插件式平台**：加新平台 = 丢一个 `platforms/<x>/platform.py` + `config/sites/<x>.yaml`，
-   核心调度自动发现，**引擎一行不用改**。
+2. **插件式平台**：加新平台 = 复制 `platforms/_example/` → `platforms/<x>/` + 写
+   `config/sites/<x>.yaml`，核心调度自动发现，**引擎一行不用改**
+   （详见 [`platforms/README.md`](运营自动化项目/Ops-Cli/src/ops_cli/platforms/README.md)）。
 3. **业务可替换**：业务内容集中在三个标注「可整体替换」的文件
    （`business_paths.py` / `business_text.py` / `notify_backends.py`），换业务不动引擎。
 

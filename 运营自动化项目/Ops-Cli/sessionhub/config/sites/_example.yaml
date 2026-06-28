@@ -1,0 +1,22 @@
+# 站点 / 场景配置模板（参考）。
+# 复制为 <你的平台名>.yaml，与 platforms/<你的平台名>/ 对应。
+# 站点配置是 URL / 场景 / 动作的唯一来源，加载器与具体平台无关。
+site: example
+name: 示例平台后台
+login_url: ""
+home_url: ""
+download_manage_url: ""
+
+scenes:
+  # 一个"场景"= 一次要抓的目标页面 + 命中判定 + 自动动作。
+  example_list:
+    target_url: "https://example.com/your/page"
+    match_url_contains:
+      - "your/api/endpoint"      # 命中这个子串的网络请求即视为目标数据
+    method: "GET"
+    auto_actions:
+      - { type: goto_target }    # 跳到 target_url
+      - { type: reload }         # 刷新触发请求
+    cache_minutes: 30
+    force_refresh_before_run: true
+    manual_login_when_failed: true
